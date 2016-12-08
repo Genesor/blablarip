@@ -1,0 +1,138 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background-image: url("image/background.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	text-align: center;
+	font-family: "Oswald", Arial, sans-serif;
+}
+
+header {
+	text-align: center;
+	padding: 15px 0;
+	margin-bottom: 20px;
+}
+
+.block {
+	width: 330px; 
+	display: inline-block;
+	padding: 0 20px;
+	margin-bottom: 50px;
+}
+
+.new .buttons {
+	background-image: url("image/new.svg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 50px;
+}
+
+.picture {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.avatar {
+	border-radius: 50%;
+	border: solid 10px rgba(255, 255, 255, 0.75);
+}
+
+.block h2 {
+	font-size: 30px;
+	font-weight: bold;
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.date {
+	font-size: 20px;
+	font-weight: 300;
+	color: #fff;
+}
+
+.minus, .plus {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background-color: #ccc;
+	border: solid 3px #555;
+	cursor: pointer;
+	position: relative;
+}
+
+.minus:hover, .plus:hover {
+	background-color: #555;
+	border: solid 3px #ccc;
+}
+
+.minus::before {
+	content: "";
+	display: inline-block;
+	height: 6px;
+	width: 14px;
+	background-color: #555;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.plus::before, .plus::after {
+	content: "";
+	display: inline-block;
+	background-color: #555;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.minus:hover::before, .plus:hover::before, .plus:hover::after {
+	background-color: #ccc;
+}
+
+.plus::before {
+	height: 6px;
+	width: 16px;
+}
+
+.plus::after {
+	height: 16px;
+	width: 6px;
+}
+
+.buttons {
+ 	text-align: center;
+ 	padding: 15px 0 20px;
+}
+
+.minus {
+ 	margin-right: 100px;
+}
+
+.points {
+	text-align: center;
+	padding: 10px 0;
+}
+
+.points span {
+	font-size: 50px;
+	font-weight: bold;
+	color: #fff;
+}
+
+ 	

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% for employe in employees %}
+    <div class="block {% if employe.newly_fired %}new{% endif %}">
+      <div class="picture">
+        <img class="avatar" src="{{ employe.photo }}" height="300">
+      </div>
+      <h2>{{ employe.name }}</h2>
+      <span class="date">R.I.P since {{ employe.firing_date.strftime('%B %d %Y') }}</span>
+        <div class="buttons {% if employe.has_received_vote_from_current_ip() == True %}invisible{% endif %}">
+          <a href='/vote/{{ employe.id }}?value=-1' class="minus" title="I'm sad">Sad</a>
+          <a href='/vote/{{ employe.id }}?value=1' class="plus" title="I'm happy">Happy</a>
+        </div>
+
+      <div class="points">
+        <span>{{ employe.score }} Points</span>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}
